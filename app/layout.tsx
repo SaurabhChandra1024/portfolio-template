@@ -41,7 +41,9 @@ export default function RootLayout({
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', '${GA_ID}', { send_page_view: false });`}</Script>
-          <GATracker />
+          <Suspense fallback={null}>
+            <GATracker />
+          </Suspense>
         </>
 
         {/* exact Microsoft Clarity snippet (hardcoded) */}
