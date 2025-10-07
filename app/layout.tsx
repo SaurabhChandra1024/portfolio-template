@@ -24,30 +24,27 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const GA_ID = process.env.NEXT_PUBLIC_GA_ID
-  const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID
+  const GA_ID = "G-XXXXXXXXXX" // TODO: replace with your GA4 Measurement ID
 
   return (
     <html lang="en">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <Suspense fallback={null}>{children}</Suspense>
 
-        {GA_ID ? (
-          <>
-            <Script
-              id="ga-script"
-              strategy="afterInteractive"
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-            />
-            <Script id="ga-inline" strategy="afterInteractive">{`window.dataLayer = window.dataLayer || [];
+        <>
+          <Script
+            id="ga-script"
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          />
+          <Script id="ga-inline" strategy="afterInteractive">{`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', '${GA_ID}', { send_page_view: false });`}</Script>
-            <GATracker />
-          </>
-        ) : null}
+          <GATracker />
+        </>
 
-        {/* Integrate the exact Microsoft Clarity snippet provided by user */}
+        {/* exact Microsoft Clarity snippet (hardcoded) */}
         <Script
           id="clarity-script"
           strategy="afterInteractive"

@@ -9,14 +9,14 @@ declare global {
   }
 }
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID
+const GA_ID = "G-XXXXXXXXXX" // TODO: replace with your GA4 Measurement ID
 
 export default function GATracker() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
   useEffect(() => {
-    if (!GA_ID || typeof window === "undefined") return
+    if (typeof window === "undefined") return
     const query = searchParams?.toString()
     const url = query ? `${pathname}?${query}` : pathname
 
