@@ -75,7 +75,7 @@ export default function Home() {
     { name: "Machine Learning & AI", percentage: 95, delay: 0 },
     { name: "Python & Data Science", percentage: 90, delay: 200 },
     { name: "Full-Stack Development", percentage: 88, delay: 400 },
-    { name: "Cloud Architecture (AWS/Azure)", percentage: 85, delay: 600 },
+    { name: "Cloud Architecture (AWS/Azure/GCP)", percentage: 85, delay: 600 },
     { name: "DevOps & CI/CD", percentage: 82, delay: 800 },
     { name: "Database Design & Management", percentage: 87, delay: 1000 },
   ]
@@ -359,7 +359,7 @@ export default function Home() {
       {/* Skills Timeline & Progress Bars Section */}
       <section id="skills-timeline" className="px-6 py-20 max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-sm text-muted-foreground uppercase tracking-wider mb-4">— EXPERTISE & EXPERIENCE</p>
+          <p className="text-sm text-muted-foreground uppercase tracking-wider mb-4">— EXPERTISE & EXPERIENCE —</p>
           <h2 className="text-4xl font-bold mb-8 text-balance text-white hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-400 hover:bg-clip-text hover:text-transparent transition-all duration-500">
             Skills & Professional Journey
           </h2>
