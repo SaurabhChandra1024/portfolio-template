@@ -18,6 +18,7 @@ import {
   Calendar,
   Award,
   Briefcase,
+  Rocket,
 } from "lucide-react"
 import { useEffect, useState } from "react"
 
@@ -81,6 +82,14 @@ export default function Home() {
   ]
 
   const timeline = [
+    {
+      year: "May 2026",
+      title: "Product Launch",
+      company: "DruptoQuiz - A product of Drupto Consultants Pvt Ltd",
+      description:
+        "Launched DruptoQuiz, an AI-powered assessment platform enabling organizations to create, share, and assess with intelligent grading, advanced proctoring, and secure certificates.",
+      icon: <Rocket className="w-5 h-5" />,
+    },
     {
       year: "2025",
       title: "Founder",
@@ -301,10 +310,11 @@ export default function Home() {
                   </a>
                 </Button>
                 <Button
+                  asChild
                   variant="outline"
                   className="border-border/50 hover:border-primary/50 hover:bg-primary/10 hover:scale-105 transition-all duration-300 bg-transparent"
                 >
-                  <button onClick={() => scrollToSection("business")}>VIEW SERVICES</button>
+                  <button type="button" onClick={() => scrollToSection("business")}>VIEW SERVICES</button>
                 </Button>
               </div>
             </div>
