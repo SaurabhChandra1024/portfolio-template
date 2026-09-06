@@ -10,12 +10,11 @@ import Script from "next/script"
 import GATracker from "@/components/ga-tracker"
 
 export const metadata: Metadata = {
-  title: "Saurabh Chandra - Software & AI Engineer",
-  description:
-    "Software & AI Engineer specializing in AI/ML solutions, cloud computing, and IT consultancy through DRUPTO CONSULTANTS",
+  title: "Drupto Consultants",
+  description: "Visit Drupto Consultants for more information.",
   generator: "v0.app",
   icons: {
-    icon: "/favicon-16x16.png",
+    icon: "https://res.cloudinary.com/db1iuag6s/image/upload/v1780993584/drupto_logo_without_bg2_vql6kd.png",
   },
 }
 
